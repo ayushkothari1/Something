@@ -1,37 +1,65 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: sans-serif;
 }
 .container {
-  background: rgb(0, 0, 18);
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background: #000012;
 }
+
 .countdown {
   height: 130px;
   width: 130px;
   background: red;
-  border: 2px solid black;
-  border-radius: 12px 12px 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  user-select: none;
+  border-radius: 12px;
   cursor: pointer;
 }
-.pros {
-  background: yellow;
-  transition: 1s;
-}
-.countdown:hover {
-  opacity: 90%;
-  height: 129px;
-  width: 129px;
+#count {
+  font-size: 40px;
+  color: white;
 }
 
-.count {
-  font-size: 40px;
+.message {
+  font-size: 60px;
+  color: white;
+  margin-top: 30px;
+}
+
+.cake {
+  width: 200px;
+  margin-top: 20px;
+  display: none;
+}
+
+.ballon {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  bottom: -120px;
+  animation: anime 6s linear infinite;
+}
+
+@keyframes anime {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
 }
