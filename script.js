@@ -45,13 +45,12 @@ function typeMessage() {
 
 function createBallon() {
   const ballon = document.createElement("div");
-  ballon.classList.add("balloon");
+  ballon.classList.add("ballon");
   ballon.style.left = Math.random() * window.innerWidth + "px";
   const colors = ["red", "blue", "yellow", "pink", "purple", "orange"];
   ballon.style.background = colors[Math.floor(Math.random() * colors.length)];
   bodyEl.appendChild(ballon);
-  (setTimeout(() => {
+  setTimeout(() => {
     ballon.remove();
-  }),
-    6000);
+  }, 6000);
 }
