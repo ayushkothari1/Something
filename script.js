@@ -32,7 +32,7 @@ function startParty() {
 }
 
 function typeMessage() {
-  const text = "🎉 Happy Birthday 🎂";
+  const text = "🎉 Happy Birthday Rai na 🎂";
   let index = 0;
   const typing = setInterval(() => {
     messageEl.innerHTML += text[index];
